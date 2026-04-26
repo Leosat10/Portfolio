@@ -1,0 +1,19 @@
+.sidebar {
+  background: var(--sidebar-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 60px;              /* fixed safe width */
+  min-width: 60px;          /* prevent collapsing */
+  height: calc(100svh - 60px);  /* correct height */
+
+  flex-shrink: 0;           /* prevent compression */
+}
+.icon {
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  display: block;
+  margin: 0 auto;
+}

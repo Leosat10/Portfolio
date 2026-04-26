@@ -1,0 +1,65 @@
+/* 🔥 Canvas Layer */
+.fireCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* 🔥 Fire Log Cursor */
+.fireLog {
+  position: fixed;
+  width: 26px;
+  height: 80px;
+  pointer-events: none;
+  border-radius: 14px;
+
+  background: linear-gradient(
+    180deg,
+    #fff8dc 0%,
+    #ffb347 20%,
+    #ff6a00 50%,
+    #8b2c00 100%
+  );
+
+  box-shadow:
+    0 0 15px #ff6a00,
+    0 0 40px rgba(255, 80, 0, 0.8),
+    0 0 80px rgba(255, 0, 0, 0.5);
+
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
+/* 🔥 Flicker Animation */
+@keyframes fireFlicker {
+  0% {
+    filter: brightness(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    filter: brightness(1.3);
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    filter: brightness(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.fireLog {
+  animation: fireFlicker 0.15s infinite alternate;
+}
+
+/* 🔥 Optional Glow On Buttons in Find-Me Theme */
+[data-theme='find-me'] button:hover {
+  box-shadow: 0 0 15px #ff6a00;
+}
+
+/* 🔥 Optional Ember Glow On Tabs */
+[data-theme='find-me'] .tab:hover {
+  box-shadow: 0 0 12px rgba(255, 106, 0, 0.7);
+}

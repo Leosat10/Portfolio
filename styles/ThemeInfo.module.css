@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 1.5rem 0;
+  text-align: center;
+
+  padding: 1.5rem;
+  border-radius: 16px;
+
+  background: var(--article-bg);
+  border: 1px solid var(--tab-border);
+
+  transition: all 0.25s ease;
+  cursor: pointer;
+
+  position: relative;
+  max-width: 240px;
+  width: 100%;
+}
+
+/* 🔥 Hover Lift + Glow */
+.container:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-color);
+
+  box-shadow:
+    0 0 0 2px rgba(0, 122, 204, 0.25),
+    0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Info Section */
+.info {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Button Style */
+.info button {
+  margin-top: 0.75rem;
+  border: none;
+
+  background: var(--button-bg);
+  color: var(--button-text);
+
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(6px) scale(0.95);
+  transition: all 0.25s ease;
+}
+
+/* 🔥 Button Appears on Hover */
+.container:hover .info button {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Focus style */
+.info button:focus {
+  outline: 2px solid var(--accent-color);
+}

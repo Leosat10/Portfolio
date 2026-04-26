@@ -1,0 +1,32 @@
+/* ================= SETTINGS PAGE WRAPPER ================= */
+
+.pageWrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+/* ================= THEME GRID WRAPPER ================= */
+
+.themeGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .pageWrapper {
+    padding: 1.5rem 1rem;
+  }
+
+  .themeGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

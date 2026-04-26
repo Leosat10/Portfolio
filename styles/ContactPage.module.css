@@ -1,0 +1,251 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  border-left: 3px solid var(--accent-color);
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--accent-color);
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.85;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* ================= BIO ================= */
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.4rem;
+  background: var(--article-bg);
+  border-radius: 18px;
+  border: 1px solid var(--tab-border);
+}
+
+.bio p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+/* ================= CONTACT GRID ================= */
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* ================= CONTACT CARD ================= */
+
+.contactCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.4rem;
+
+  background: var(--article-bg);
+  border: 1px solid var(--tab-border);
+  border-radius: 18px;
+
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 🔥 Lift + Glow */
+.contactCard:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-color);
+
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, var(--accent-color) 35%, transparent),
+    0 20px 55px rgba(0, 0, 0, 0.6);
+}
+
+/* ✨ Inner ambient glow */
+.contactCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  box-shadow: inset 0 0 40px
+    color-mix(in srgb, var(--accent-color) 25%, transparent);
+}
+
+.contactCard:hover::after {
+  opacity: 1;
+}
+
+/* ================= CARD CONTENT ================= */
+
+.cardIcon {
+  font-size: 1.6rem;
+  line-height: 1;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--accent-color);
+}
+
+.cardValue {
+  font-size: 0.85rem;
+  margin: 0;
+  color: var(--text-color);
+  opacity: 0.85;
+  word-break: break-word;
+}
+
+.cardDescription {
+  font-size: 0.75rem;
+  margin: 0;
+  opacity: 0.65;
+  color: var(--text-color);
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0 0.5rem 0;
+  border-top: 1px solid var(--tab-border);
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 500;
+}
+
+.statusIndicator {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.75rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .bio {
+    padding: 1.1rem;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contactCard {
+    padding: 1.1rem;
+  }
+
+  .cardIcon {
+    font-size: 1.4rem;
+  }
+
+  .cardTitle {
+    font-size: 0.9rem;
+  }
+
+  .cardValue {
+    font-size: 0.8rem;
+  }
+
+  .cardDescription {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .bio {
+    padding: 1rem;
+  }
+
+  .availability {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+}
