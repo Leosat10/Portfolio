@@ -6,22 +6,48 @@ export const ContactSection = () => {  const contactMethods = [
       value: 'leosat2k4@gmail.com',
       href: 'mailto:leosat2k4@gmail.com',
       icon: '✉',
-      description: 'Primary contact method'
+      description: 'Primary Contact'
     },
     {
-      name: 'LinkedIn',
-      value: 'linkedin.com/santhosh',
-      href: 'https://www.linkedin.com/in/santhosh-leo10',
-      icon: '💼',
-      description: 'Professional network'
-    },
-    {
-      name: 'GitHub',
-      value: 'github.com/leosat',
-      href: 'https://github.com/Leosat10',
-      icon: '💻',
-      description: 'Open source projects'
-    },      
+  name: 'LinkedIn',
+  value: 'linkedin.com/leo10',
+  href: 'https://www.linkedin.com/in/santhosh-leo10',
+  icon: <img src="/linkedin.png" alt="LinkedIn" />,
+  description: 'Professional Network'
+},
+ 
+{
+  name: 'GitHub',
+  value: 'github.com/Leosat10',
+  href: 'https://github.com/Leosat10',
+  icon: <img src="/github-darkej.png" alt="GitHub" />,
+  description: 'Open Source Projects'
+},
+    
+     {
+      name: 'Discord',
+      value: 'L30sat',
+      href: 'https://discord.com/channels/@le0sat10',
+      icon: <img src="/discord.png" alt="Discord" />,
+      description: 'Join Server'
+    }, 
+
+     {
+      name: 'YouTube',
+      value: 'TechieeLeo',
+      href: 'https://www.youtube.com/@leosat10',
+      icon: <img src="/youtube.png" alt="YouTube" />,
+      description: 'Video Content'
+    }, 
+
+{
+      name: 'Reddit',
+      value: 'FangYugn',
+      href: 'https://www.reddit.com/user/Greedy_Abrocoma637/',
+      icon: <img src="/reddit.png" alt="reddits" />,
+      description: 'Open Discussions'
+    }
+
 
   ];
 

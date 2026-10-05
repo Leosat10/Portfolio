@@ -6,28 +6,36 @@ const myProjects = [
     id: 1,
     title: "Light weight secure operating system (On-going)",
     description:
-      "This project focuses on building a lightweight operating system from scratch that runs directly on hardware (Currently working on this)",
+      "This project focuses on building a lightweight operating system from scratch that runs directly on hardware",
     link: "https://github.com/Leosat10/LeOS.git",
   },
-  {
+
+{
     id: 2,
-    title: "Personal Portfolio",
+    title: "E-Commerce Website",
     description:
-      "A responsive personal portfolio showcasing my skills, projects, and experience.",
-    link: "https://github.com/Leosat10/Portfolio",
+      "A live client e-commerce website built for seamless product discovery, conversion-focused experiences, and automated customer engagement",
+    link: "https://tempforg.com/",
   },
   {
     id: 3,
-    title: "Mobile Charging System",
+    title: "Personal Portfolio",
     description:
-      "A hardware-based mobile charging system project published on Hackster.",
-    link: "https://leosat10.github.io/Mobile-Charging-System",
+      "A responsive personal portfolio showcasing my skills, projects, and experience",
+    link: "https://github.com/Leosat10/Portfolio",
   },
   {
     id: 4,
+    title: "Mobile Charging System",
+    description:
+      "A hardware-based mobile charging system project published on Hackster",
+    link: "https://leosat10.github.io/Mobile-Charging-System",
+  },
+  {
+    id: 5,
     title: "Pick and Place Robot",
     description:
-      "An automated pick and place robot project demonstrating robotics and control systems.",
+      "An automated pick and place robot project demonstrating robotics and control systems3",
     link: "https://leosat10.github.io/Pick-and-Place-Robot",
   },
 ];
