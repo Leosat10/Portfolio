@@ -21,7 +21,7 @@ const myProjects = [
     id: 3,
     title: "Project Prometheus",
     description:
-      "A self-healing, intent-based EVPN/VXLAN data center fabric built from scratch — the architecture behind AWS, Azure, and Google's networks.",
+      "A self-healing, intent-based EVPN/VXLAN data center fabric built from scratch — the architecture behind AWS, Azure, and Google's networks",
     link: "https://github.com/Leosat10/project-prometheus.git",
   },
   {
@@ -42,7 +42,7 @@ const myProjects = [
     id: 6,
     title: "Pick and Place Robot",
     description:
-      "An automated pick and place robot project demonstrating robotics and control systems3",
+      "An automated pick and place robot project demonstrating robotics and control systems",
     link: "https://leosat10.github.io/Pick-and-Place-Robot",
   },
 ];
